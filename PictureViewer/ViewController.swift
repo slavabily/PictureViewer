@@ -8,11 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
+    
+    let dataSource = ProjectDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+         
+        title = "Picture Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
     }
 
 
