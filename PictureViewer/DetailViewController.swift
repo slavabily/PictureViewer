@@ -9,11 +9,13 @@
 import UIKit
 
 class DetailViewController: UIViewController, Storyboarded {
+    
+    var selectedImage: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = selectedImage
     }
     
 

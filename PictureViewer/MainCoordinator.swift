@@ -28,6 +28,8 @@ class MainCoordinator: Coordinator {
     func show(picture: String) {
         let detailVC = DetailViewController.instantiate()
         
+        detailVC.selectedImage = picture
+        
         navigationController.pushViewController(detailVC, animated: true)
     }
     

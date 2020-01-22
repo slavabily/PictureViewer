@@ -32,7 +32,5 @@ class ViewController: UITableViewController, Storyboarded {
         coordinator?.show(picture: picture)
 
      }
-
-
 }
 
