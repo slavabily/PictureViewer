@@ -16,6 +16,8 @@ class DetailViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         title = selectedImage
+        let imageView = UIImageView(image: UIImage(named: selectedImage!))
+        view.addSubview(imageView)
     }
     
 
