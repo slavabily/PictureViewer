@@ -16,14 +16,20 @@ class ViewController: UITableViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
         title = "Picture Viewer"
+        
+        tableView.dataSource = dataSource
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Picture")
+        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let picture = dataSource.pictures[indexPath.row]
+//
+//     }
 
 
 }

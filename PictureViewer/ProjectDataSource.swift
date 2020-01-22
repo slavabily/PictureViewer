@@ -32,8 +32,9 @@ class ProjectDataSource: NSObject, UITableViewDataSource {
     }
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-          cell.textLabel?.text = pictures[indexPath.row]
-          return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+        cell.textLabel?.text = pictures[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
+        return cell
     }
 }
