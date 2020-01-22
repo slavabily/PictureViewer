@@ -25,5 +25,11 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func show(picture: String) {
+        let detailVC = DetailViewController.instantiate()
+        
+        navigationController.pushViewController(detailVC, animated: true)
+    }
+    
     
 }

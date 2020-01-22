@@ -26,10 +26,12 @@ class ViewController: UITableViewController, Storyboarded {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let picture = dataSource.pictures[indexPath.row]
-//
-//     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let picture = dataSource.pictures[indexPath.row]
+        
+        coordinator?.show(picture: picture)
+
+     }
 
 
 }
