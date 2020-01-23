@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController, Storyboarded {
     
-    weak var coordinator: MainCoordinator?
+    var showPicture: ((String) -> Void)?
     
     let dataSource = ProjectDataSource()
 
@@ -29,7 +29,7 @@ class ViewController: UITableViewController, Storyboarded {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let picture = dataSource.pictures[indexPath.row]
         
-        coordinator?.show(picture: picture)
+        showPicture?(picture)
 
      }
 }

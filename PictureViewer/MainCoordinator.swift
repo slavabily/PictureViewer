@@ -20,7 +20,7 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = ViewController.instantiate()
         
-        vc.coordinator = self
+        vc.showPicture = show(picture:)
         
         navigationController.pushViewController(vc, animated: false)
     }
