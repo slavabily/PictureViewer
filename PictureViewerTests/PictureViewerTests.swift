@@ -30,5 +30,10 @@ class PictureViewerTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testPicturesArrayIsNotEmpty() {
+        let datasource = ProjectDataSource()
+        XCTAssertFalse(datasource.pictures.isEmpty)
+    }
 
 }
