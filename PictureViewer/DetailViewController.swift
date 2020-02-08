@@ -1,4 +1,5 @@
 //
+
 //  DetailViewController.swift
 //  PictureViewer
 //
@@ -12,7 +13,7 @@ class DetailViewController: UIViewController, Storyboarded {
     
     var selectedImage: String?
     var imageView: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +36,7 @@ class DetailViewController: UIViewController, Storyboarded {
             return
         }
         
-        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        let vc = UIActivityViewController(activityItems: [image,"image description: \(selectedImage!)"], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
     }
